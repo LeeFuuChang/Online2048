@@ -1,0 +1,55 @@
+section#join {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+section#join #join-block {
+    position: relative;
+    flex-direction: column;
+    width: var(--section-block-size);
+    height: var(--section-block-size);
+    background: #fff;
+    border-radius: 12px;
+}
+section#join #join-block #title {
+    font-size: calc(var(--section-block-size) / 5);
+    font-stretch: 100%;
+    font-weight: 700;
+    font-family: Arial, sans-serif;
+}
+section#join #join-block #title span {
+    font-size: calc(var(--section-block-size) / 10);
+    font-stretch: 100%;
+    font-weight: 700;
+    font-family: Arial, sans-serif;
+}
+section#join #join-block #nickname {
+    width: calc(var(--section-block-size) * 0.8);
+    height: calc(var(--section-block-size) * 0.1);
+    margin: 2%;
+    padding: 2%;
+    border-radius: 4px;
+    outline: none;
+    border: 2px solid #929292;
+}
+section#join #join-block #play-button {
+    text-align: center;
+    color: #ffffff;
+    background: #53c800;
+    font-size: 20px;
+    font-family: Arial, sans-serif;
+    font-stretch: 100%;
+    font-weight: 700;
+    border-radius: 4px;
+    width: 80%;
+    height: 10%;
+    margin: 2%;
+    padding: 2%;
+    transition: 0.3s;
+    cursor: pointer;
+}
+section#join #join-block #play-button:hover {
+    background: #347F01;
+}

@@ -1,0 +1,78 @@
+#game {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+    z-index: 0;
+}
+
+:root {
+    --block-color: #c1b3a4;
+    --board-color: #ad9d8f;
+    --color-0000-b : #c1b3a4;
+    --color-0002-f : #776e65;
+    --color-0002-b : #eee4da;
+    --color-0004-f : #776e65;
+    --color-0004-b : #ede0c8;
+    --color-0008-f : #f9f6f2;
+    --color-0008-b : #f2b179;
+    --color-0016-f : #f9f6f2;
+    --color-0016-b : #f59563;
+    --color-0032-f : #f9f6f2;
+    --color-0032-b : #f67c5f;
+    --color-0064-f : #f9f6f2;
+    --color-0064-b : #f65e3b;
+    --color-0128-f : #f9f6f2;
+    --color-0128-b : #edcf72;
+    --color-0256-f : #f9f6f2;
+    --color-0256-b : #edcc61;
+    --color-0512-f : #f9f6f2;
+    --color-0512-b : #3dc850;
+    --color-1024-f : #f9f6f2;
+    --color-1024-b : #edc53f;
+    --color-2048-f : #f9f6f2;
+    --color-2048-b : #edc22e;
+}
+
+.player {
+    z-index: 1;
+    flex-grow: 1;
+    flex-direction: column;
+    height: 100%;
+    background: transparent;
+}
+
+.board {
+    --border-ratio: 0.05;
+    flex-wrap: wrap;
+    box-shadow: 
+        calc(var(--block-size) * var(--border-ratio) *  1) calc(var(--block-size) * var(--border-ratio) *  1) 0px var(--board-color),
+        calc(var(--block-size) * var(--border-ratio) *  1) calc(var(--block-size) * var(--border-ratio) * -1) 0px var(--board-color),
+        calc(var(--block-size) * var(--border-ratio) * -1) calc(var(--block-size) * var(--border-ratio) *  1) 0px var(--board-color),
+        calc(var(--block-size) * var(--border-ratio) * -1) calc(var(--block-size) * var(--border-ratio) * -1) 0px var(--board-color);
+    width: calc(var(--block-size) * var(--board-size));
+    height: calc(var(--block-size) * var(--board-size));
+    background: var(--board-color);
+}
+
+.board .block {
+    font-size: calc(var(--block-size) * 0.5);
+    border: calc(var(--block-size) * var(--border-ratio)) solid var(--board-color);
+    width: var(--block-size);
+    height: var(--block-size);
+    background: var(--block-color);
+}
+
+.board .block[data-value=   "2"] {background: var(--color-0002-b); color: var(--color-0002-f)}
+.board .block[data-value=   "4"] {background: var(--color-0004-b); color: var(--color-0004-f)}
+.board .block[data-value=   "8"] {background: var(--color-0008-b); color: var(--color-0008-f)}
+.board .block[data-value=  "16"] {background: var(--color-0016-b); color: var(--color-0016-f)}
+.board .block[data-value=  "32"] {background: var(--color-0032-b); color: var(--color-0032-f)}
+.board .block[data-value=  "64"] {background: var(--color-0064-b); color: var(--color-0064-f)}
+.board .block[data-value= "128"] {background: var(--color-0128-b); color: var(--color-0128-f)}
+.board .block[data-value= "256"] {background: var(--color-0256-b); color: var(--color-0256-f)}
+.board .block[data-value= "512"] {background: var(--color-0512-b); color: var(--color-0512-f)}
+.board .block[data-value="1024"] {background: var(--color-1024-b); color: var(--color-1024-f)}
+.board .block[data-value="2048"] {background: var(--color-2048-b); color: var(--color-2048-f)}

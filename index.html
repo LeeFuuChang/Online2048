@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2048</title>
+
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script type="module" src="assets/js/app.js"></script>
+</head>
+<body class="df aic jcc">
+    <canvas class="background"></canvas>
+    <section id="join" class="aic jcc" style="display: flex">
+        <div id="join-block" class="df aic jcc">
+            <h1 id="title">2048</h1>
+            <input type="text" name="nickname" placeholder="nickname" id="nickname">
+            <a id="play-button" class="df aic jcc">Play</a>
+        </div>
+    </section>
+    <section id="menu" class="aic jcc" style="display: none">
+        <div id="menu-block" class="df aic jcc">
+            <input type="text" id="room-id-input" placeholder="Room ID">
+            <div id="buttons" class="df aic jcc">
+                <a id="host-button" class="button df aic jcc">Host</a>
+                <a id="join-button" class="button df aic jcc">Join</a>
+            </div>
+        </div>
+    </section>
+    <section id="room" class="aic jcc host" style="display: none">
+        <div id="room-block" class="df aic jcc">
+            <div id="room-id-block">
+                <p>Room ID</p>
+                <h1 id="room-id" class="df aic">H0qLd4YVETWLdMTKTXPr1hhYrgv1</h1>
+            </div>
+            <div id="room-participants-block"></div>
+            <div id="room-buttons-block" class="host-show df aic jcc">
+                <a id="start-button" class="df aic jcc">Start</a>
+            </div>
+        </div>
+    </section>
+    <section id="game" class="aic jcc" style="display: none"></section>
+</body>
+</html>

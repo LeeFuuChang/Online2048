@@ -1,0 +1,35 @@
+@import url("./menu.css");
+@import url("./room.css");
+@import url("./game.css");
+@import url("./join.css");
+
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --section-block-size: 400px;
+}
+
+.df {display: flex;}
+.aic {align-items: center;}
+.jcc {justify-content: center;}
+
+body {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.background {
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -100;
+}
+
