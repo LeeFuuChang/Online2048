@@ -147,7 +147,6 @@ class Server {
     signIn = (nickname)=>{
         this.local.id = nickname;
         signInAnonymously(this.auth);
-        set(this.localRef, this.local);
     }
 
     hostRoom = ()=>{
